@@ -458,6 +458,7 @@ class RLAgent(ABC):
         if (self._enable_output() and self.iter % self.output_iters == 0):
             output_path = self._get_output_path()
             output_dir = os.path.dirname(output_path)
+
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             self.save_model(output_path)
@@ -536,6 +537,13 @@ class RLAgent(ABC):
                     g_mean = np.mean(self.g_norm.mean) if has_goal else 0
                     g_std = np.mean(self.g_norm.std) if has_goal else 0
 
+                    r_fail = self.world.env.get_reward_fail(self.id)
+                    r_succ = self.world.env.get_reward_succ(self.id)
+
+                    r_min = self.world.env.get_reward_min(self.id)
+                    r_max = self.world.env.get_reward_max(self.id)
+                    r = self._record_reward()
+
                     self.logger.log_tabular("Iteration", self.iter)
                     self.logger.log_tabular("Wall_Time", wall_time)
                     self.logger.log_tabular("Samples", self._total_sample_count)
@@ -545,6 +553,18 @@ class RLAgent(ABC):
                     self.logger.log_tabular("State_Std", s_std)
                     self.logger.log_tabular("Goal_Mean", g_mean)
                     self.logger.log_tabular("Goal_Std", g_std)
+                    self.logger.log_tabular("r_fail", r_fail)
+                    self.logger.log_tabular("r_succ", r_succ)
+                    self.logger.log_tabular("r_min", r_min)
+                    self.logger.log_tabular("r_max", r_max)
+                    self.logger.log_tabular("Reward", r)
+
+
+                    Logger.print("r "+str(r))
+                    Logger.print("r_succ "+str(r_succ))
+                    Logger.print("r_min "+str(r_min))
+                    Logger.print("r_max "+str(r_max))
+
                     self._log_exp_params()
 
                     self._update_iter(self.iter + 1)

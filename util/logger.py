@@ -16,6 +16,7 @@ A['EpRewMean']
 """
 
 import os.path as osp, shutil, time, atexit, os, subprocess
+from table_logger import TableLogger
 
 class Logger:
     def print(str):
@@ -93,7 +94,15 @@ class Logger:
                     valstr = val
                 Logger.print("| %15s | %15s |"%(key, valstr))
                 vals.append(val)
+
+                if(key == "Reward"):
+                    with open('log.csv', 'w') as csvfile:
+                        tbl = TableLogger(columns='name,salary',
+                                      default_colwidth=15)
+                        tbl(key, valstr)
+
             Logger.print("-" * 37)
+
         return
 
     def dump_tabular(self):

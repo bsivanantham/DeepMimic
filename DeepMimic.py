@@ -1,14 +1,17 @@
 import numpy as np
-# from OpenGL.GLUT import *
-import OpenGL.GLUT
-from OpenGL.raw.GLUT import *
+import sys
+import random
 
-import util.mpi_util as MPIUtil
-import util.util as Util
+from OpenGL.GL import *
+from OpenGL.GLUT import *
+from OpenGL.GLU import *
+
 from env.deepmimic_env import DeepMimicEnv
 from learning.rl_world import RLWorld
 from util.arg_parser import ArgParser
 from util.logger import Logger
+import util.mpi_util as MPIUtil
+import util.util as Util
 
 # Dimensions of the window we are drawing into.
 win_width = 800
@@ -42,7 +45,7 @@ def build_arg_parser(args):
         assert succ, Logger.print('Failed to load args from: ' + arg_file)
 
     rand_seed_key = 'rand_seed'
-    if arg_parser.has_key(rand_seed_key):
+    if (arg_parser.has_key(rand_seed_key)):
         rand_seed = arg_parser.parse_int(rand_seed_key)
         rand_seed += 1000 * MPIUtil.get_proc_rank()
         Util.set_global_seeds(rand_seed)
@@ -51,8 +54,8 @@ def build_arg_parser(args):
 
 
 def update_intermediate_buffer():
-    if not reshaping:
-        if win_width != world.env.get_win_width() or win_height != world.env.get_win_height():
+    if not (reshaping):
+        if (win_width != world.env.get_win_width() or win_height != world.env.get_win_height()):
             world.env.reshape(win_width, win_height)
 
     return
@@ -151,7 +154,7 @@ def shutdown():
 
     Logger.print('Shutting down...')
     world.shutdown()
-    OpenGL.GLUT.sys.exit(0)
+    sys.exit(0)
     return
 
 
@@ -196,7 +199,7 @@ def animate(callback_val):
         timer_step -= update_dur
         timer_step = np.maximum(timer_step, 0)
 
-        OpenGL.GLUT.glutTimerFunc(int(timer_step), animate, 0)
+        glutTimerFunc(int(timer_step), animate, 0)
         glutPostRedisplay()
 
     if (world.env.is_done()):
@@ -210,7 +213,7 @@ def toggle_animate():
 
     animating = not animating
     if (animating):
-        OpenGL.GLUT.glutTimerFunc(display_anim_time, animate, 0)
+        glutTimerFunc(display_anim_time, animate, 0)
 
     return
 
@@ -223,7 +226,7 @@ def change_playback_speed(delta):
     world.env.set_playback_speed(playback_speed)
 
     if (np.abs(prev_playback) < 0.0001 and np.abs(playback_speed) > 0.0001):
-        OpenGL.GLUT.glutTimerFunc(display_anim_time, animate, 0)
+        glutTimerFunc(display_anim_time, animate, 0)
 
     return
 
@@ -281,25 +284,25 @@ def mouse_move(x, y):
 
 
 def init_draw():
-    OpenGL.GLUT.glutInit()
+    glutInit()
 
-    # glutInitContextVersion(3, 2)
-    OpenGL.GLUT.glutInitContextFlags(OpenGL.GLUT.GLUT_FORWARD_COMPATIBLE)
-    OpenGL.GLUT.glutInitContextProfile(OpenGL.GLUT.GLUT_CORE_PROFILE)
+    #glutInitContextVersion(3, 2)
+    glutInitContextFlags(GLUT_FORWARD_COMPATIBLE)
+    glutInitContextProfile(GLUT_CORE_PROFILE)
 
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
     glutInitWindowSize(win_width, win_height)
-    OpenGL.GLUT.glutCreateWindow(b'DeepMimic')
+    glutCreateWindow(b'DeepMimic')
     return
 
 
 def setup_draw():
-    OpenGL.GLUT.glutDisplayFunc(draw)
-    OpenGL.GLUT.glutReshapeFunc(reshape)
-    OpenGL.GLUT.glutKeyboardFunc(keyboard)
-    OpenGL.GLUT.glutMouseFunc(mouse_click)
-    OpenGL.GLUT.glutMotionFunc(mouse_move)
-    OpenGL.GLUT.glutTimerFunc(display_anim_time, animate, 0)
+    glutDisplayFunc(draw)
+    glutReshapeFunc(reshape)
+    glutKeyboardFunc(keyboard)
+    glutMouseFunc(mouse_click)
+    glutMotionFunc(mouse_move)
+    glutTimerFunc(display_anim_time, animate, 0)
 
     reshape(win_width, win_height)
     world.env.reshape(win_width, win_height)
@@ -325,7 +328,7 @@ def main():
     global args
 
     # Command line arguments
-    args = OpenGL.GLUT.sys.argv[1:]
+    args = sys.argv[1:]
 
     init_draw()
     reload()
