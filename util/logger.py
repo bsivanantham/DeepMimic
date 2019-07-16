@@ -95,12 +95,6 @@ class Logger:
                 Logger.print("| %15s | %15s |"%(key, valstr))
                 vals.append(val)
 
-                if(key == "Reward"):
-                    with open('log.csv', 'w') as csvfile:
-                        tbl = TableLogger(columns='name,salary',
-                                      default_colwidth=15)
-                        tbl(key, valstr)
-
             Logger.print("-" * 37)
 
         return
