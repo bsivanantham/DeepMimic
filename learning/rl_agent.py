@@ -1,3 +1,5 @@
+import csv
+
 import numpy as np
 import copy
 import os
@@ -457,6 +459,7 @@ class RLAgent(ABC):
 
     def _update_iter(self, iter):
         r = self._record_reward()
+        rewardList = []
 
         if (self._enable_output() and self.iter % self.output_iters == 0):
             output_path = self._get_output_path()
@@ -466,6 +469,9 @@ class RLAgent(ABC):
                 os.makedirs(output_dir)
             self.save_model(output_path)
             self.save_model("output/reward/" + str(r) + output_path)
+            with open('output_iters.csv', 'a') as newFile:
+                newFileWriter = csv.writer(newFile)
+                newFileWriter.writerow([str(r), str(self.output_iters)])
 
         if (self._enable_int_output() and self.iter % self.int_output_iters == 0):
             int_output_path = self._get_int_output_path()
@@ -475,7 +481,24 @@ class RLAgent(ABC):
             self.save_model(int_output_path)
             self.save_model("output/reward/" + str(r) + int_output_path)
 
+            with open('int_output_iters.csv', 'a') as newFile:
+                newFileWriter = csv.writer(newFile)
+                newFileWriter.writerow([str(r), str(self.int_output_iters)])
+
         self.save_model("output/rewardAll/" + str(r) + ':iteration-' + str(iter) + '_model.ckpt')
+
+        with open('reward.csv', 'a') as newFile:
+            newFileWriter = csv.writer(newFile)
+            newFileWriter.writerow([str(r), str(iter)])
+
+        # with open('reward.csv', 'w') as readcsv:
+        #     plots = csv.writer(readcsv, delimiter=',')
+        #     for row in plots:
+        #         # rewardList.append(r)
+        #         # rewardList.append(iter)
+        #         rewardList.append([r, iter])
+
+
         self.iter = iter
         return
 

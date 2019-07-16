@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/learning/rl_agent.py" line="499" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="821cfab7-ed5c-4140-987b-3210ba2f00a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeepMimic.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeepMimic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/args/kin_char_args.txt" beforeDir="false" afterPath="$PROJECT_DIR$/args/kin_char_args.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learning/rl_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning/rl_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/agent0_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/agent0_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/agent0_model.ckpt.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/output/agent0_model.ckpt.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/agent0_model.ckpt.index" beforeDir="false" afterPath="$PROJECT_DIR$/output/agent0_model.ckpt.index" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +47,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learning/tf_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-436">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learning/rl_agent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="551" column="65" selection-start-line="551" selection-start-column="65" selection-end-line="551" selection-end-column="65" />
+            <state relative-caret-position="274">
+              <caret line="44" column="77" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/learning/rl_agent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/logger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="434">
+              <caret line="103" column="63" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -110,10 +116,12 @@
       <find>Saver</find>
       <find>save</find>
       <find>Logging data</find>
-      <find>reward</find>
       <find>r_fail</find>
       <find>_output_dir</find>
       <find>logger</find>
+      <find>saver.</find>
+      <find>reward</find>
+      <find>get_output_path</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -133,8 +141,9 @@
         <option value="$PROJECT_DIR$/DeepMimic.py" />
         <option value="$PROJECT_DIR$/args/kin_char_args.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/learning/rl_agent.py" />
         <option value="$PROJECT_DIR$/util/logger.py" />
+        <option value="$PROJECT_DIR$/learning/tf_agent.py" />
+        <option value="$PROJECT_DIR$/learning/rl_agent.py" />
       </list>
     </option>
   </component>
@@ -172,7 +181,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/DeepMimic.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -320,18 +329,26 @@
       <option name="presentableId" value="Default" />
       <updated>1561632668970</updated>
     </task>
+    <task id="LOCAL-00001" summary="data save upgrade">
+      <created>1563280100950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563280100951</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49864498" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49864498" visible="true" weight="0.3084061" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.501355" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.51771116" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970026" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28610355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3996367" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -344,6 +361,11 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="configuration changes" />
+    <MESSAGE value="data save upgrade" />
+    <option name="LAST_COMMIT_MESSAGE" value="data save upgrade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -469,13 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning/ppo_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/mpi_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -496,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning/tf_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -517,17 +525,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learning/rl_agent.py">
+    <entry file="file://$PROJECT_DIR$/util/logger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="551" column="65" selection-start-line="551" selection-start-column="65" selection-end-line="551" selection-end-column="65" />
+        <state relative-caret-position="434">
+          <caret line="103" column="63" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/logger.py">
+    <entry file="file://$PROJECT_DIR$/learning/ppo_agent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="149">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning/tf_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="44" column="77" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning/rl_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
