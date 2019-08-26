@@ -35,4 +35,5 @@ Currently joints in .bvh files have to be manually assigned by name to the corre
 
 ## Related Projects
 
-[List of related projects](https://github.com/SleepingFox88/DeepMimic-Animation-Conversion)
+[BvhToDeepMimic](https://github.com/BartMoyaers/BvhToDeepMimic)
+
