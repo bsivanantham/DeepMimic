@@ -1,6 +1,6 @@
 # BvhToMimic 
 
-## mocap file can be obtained from [this database](http://mocap.cs.sfu.ca/).)
+## Mocap file can be obtained from [this database](http://mocap.cs.sfu.ca/).
 
 
 ## Installation
