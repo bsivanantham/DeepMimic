@@ -30,7 +30,7 @@ converter.writeDeepMimicFile(pathToBvhFile, outputPath)
 
 Or use [the example script](./example_script.py) that will convert all .bvh files located in ./InputBvh/ into Mimic Motion files, located in ./OutputMimic/ .
 
-## Progress
+```# # Progress
 
 ![Walking_example](./Assets/walking_example.gif)
 
@@ -38,7 +38,8 @@ Or use [the example script](./example_script.py) that will convert all .bvh file
 
 ![SpeedVault_example](./Assets/SpeedVault_example.gif)
 
-Watch more videos of recorded conversions [here](https://www.youtube.com/playlist?list=PLd8lridYo1jPV26RsWZIGSJJew9nu4XSF).
+Watch more videos of recorded conversions [here](https://www.youtube.com/playlist?list=PLd8lridYo1jPV26RsWZIGSJJew9nu4XSF). 
+```
 
 ## Creating a settings file
 
@@ -47,7 +48,3 @@ Currently joints in .bvh files have to be manually assigned by name to the corre
 ## Related Projects
 
 [List of related projects](https://github.com/SleepingFox88/DeepMimic-Animation-Conversion)
-
-### Notes
-
-This code has been developed within the [ACRO research group](https://iiw.kuleuven.be/onderzoek/acro).
