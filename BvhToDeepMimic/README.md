@@ -1,8 +1,9 @@
 # BvhToMimic [![Build Status](https://travis-ci.org/BartMoyaers/BvhToDeepMimic.svg?branch=master)](https://travis-ci.org/BartMoyaers/BvhToDeepMimic) [![PyPI version](https://badge.fury.io/py/bvhtodeepmimic.svg)](https://badge.fury.io/py/bvhtodeepmimic) ![Codecov](https://img.shields.io/codecov/c/github/BartMoyaers/BvhToDeepMimic) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bvhtodeepmimic)
 
-## Goal
+```## Goal
 
 The [DeepMimic project](https://github.com/xbpeng/DeepMimic) currently offers no way to import custom reference motions. This is shown in [DeepMimic issue #23](https://github.com/xbpeng/DeepMimic/issues/23). This project aims to transfer animation data from .BVH files into DeepMimic motion files. Motion files can then be used to train DeepMimic skills. Many thanks to user [SleepingFox88](https://github.com/SleepingFox88) for starting off the project. Original repository can be found [here](https://github.com/SleepingFox88/BvhToMimic). This repository currently works well with [this database](http://mocap.cs.sfu.ca/).
+```
 
 ## Installation
 `pip install bvhtodeepmimic`    
