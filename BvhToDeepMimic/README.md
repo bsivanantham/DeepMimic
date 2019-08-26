@@ -26,17 +26,6 @@ converter.writeDeepMimicFile(pathToBvhFile, outputPath)
 
 Or use [the example script](./example_script.py) that will convert all .bvh files located in ./InputBvh/ into Mimic Motion files, located in ./OutputMimic/ .
 
-```# # Progress
-
-![Walking_example](./Assets/walking_example.gif)
-
-(GIF has been generated using [this](http://mocap.cs.sfu.ca/nusmocap/0005_Walking001.bvh) mocap file from [this database](http://mocap.cs.sfu.ca/).)
-
-![SpeedVault_example](./Assets/SpeedVault_example.gif)
-
-Watch more videos of recorded conversions [here](https://www.youtube.com/playlist?list=PLd8lridYo1jPV26RsWZIGSJJew9nu4XSF). 
-```
-
 ## Creating a settings file
 
 Currently joints in .bvh files have to be manually assigned by name to the corresponding joints in the DeepMimic humanoid model. This is done by assigning the .bvh model's bone names to the corresponding joint properties in [./Settings/settings.json](./Settings/settings.json). On top of the joint assignments, this file should also include settings to change the scale by which the .bvh file should be transformed, and the joints used to identify the **root** rotation of the model.
