@@ -1,5 +1,8 @@
 # BvhToMimic 
 
+## mocap file can be obtained from [this database](http://mocap.cs.sfu.ca/).)
+
+
 ## Installation
 `pip install bvhtodeepmimic`    
 or  
