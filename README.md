@@ -1,6 +1,7 @@
 # Intro 
 
 Project page: https://xbpeng.github.io/projects/DeepMimic/index.html
+
 Github : https://github.com/bsivanantham/mimic-code
 
 This is a forked project from above link for research pupose where mimicking human like movements using Proximal Policy Optimisation with motion capture data
