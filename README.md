@@ -1,11 +1,9 @@
 # Intro 
 
-Code accompanying the SIGGRAPH 2018 paper:
-"DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills".
-The framework uses reinforcement learning to train a simulated humanoid to imitate a variety
-of motion skills from mocap data.
-
 Project page: https://xbpeng.github.io/projects/DeepMimic/index.html
+Github : https://github.com/bsivanantham/mimic-code
+
+This is a forked project from above link for research pupose where mimicking human like movements using Proximal Policy Optimisation with motion capture data
 
 ![Skills](images/teaser.png)
 
